@@ -46,6 +46,7 @@ body{
 
 /* home*/
 
+
 .hero-grid-wrapper {
   margin-top: 4%;
   display: flex;
@@ -53,17 +54,16 @@ body{
   justify-content: center;
   background-color: #f9f9f9;
   gap: 4px;
-
+margin-bottom: 20px;
   
 }
 
 /* Fixed size box */
 .hero-box{
-  width: 700px;
+  width: 600px;
   height: auto;
   padding: 30px 120px;
   box-sizing: border-box;
-  background-color: #1c1c7f;
   text-align: left;
 }
 .hero-box h1{
@@ -104,36 +104,68 @@ body{
 }
 
 
+/* Tablet devices (up to 768px) */
 @media (max-width: 768px) {
+  #nav-bar {
+    padding: 10px 20px;
+  }
+
+  .hero-grid-wrapper {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
   .hero-box {
+    width: 100%;
     padding: 20px;
   }
+
   .hero-box h1 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
+
   .hero-box p,
   .hero-box ul li {
     font-size: 14px;
   }
+
   .hero-box img {
+    width: 100%;
+    height: auto;
     max-height: 300px;
+    margin-top: 20px;
   }
 }
 
-
+/* Mobile devices (up to 480px) */
 @media (max-width: 480px) {
   .hero-box {
     padding: 15px;
   }
+
   .hero-box h1 {
     font-size: 1rem;
   }
+
   .hero-box p,
   .hero-box ul li {
     font-size: 13px;
   }
 
+  .hero-box ul {
+    width: 100%;
+  }
+
   .hero-box img {
-    max-height: 400px;
+    max-height: 250px;
+  }
+
+  .btn-outline-primary {
+    width: 100% !important;
+    font-size: 16px !important;
+  }
+
+  .btn-outline-primary p {
+    font-size: 16px !important;
   }
 }
